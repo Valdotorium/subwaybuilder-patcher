@@ -41,8 +41,8 @@ jobs:
           cd tippecanoe
           mv ./tile-join $GITHUB_WORKSPACE
           cd $GITHUB_WORKSPACE
-          ./tile-join -o map_tiles/merged.pmtiles map_tiles/*.pmtiles
+          ./tile-join -o merged.pmtiles *.pmtiles
       - uses: actions/upload-artifact@v4.6.2
         with:
-          name: map_tiles/merged.pmtiles
-          path: map_tiles/merged.pmtiles
+          name: merged.pmtiles
+          path: merged.pmtiles
